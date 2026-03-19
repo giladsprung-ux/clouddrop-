@@ -245,6 +245,54 @@ function placeOrder(e) {
   }
 }
 
+// ── EXIT INTENT ──
+function initExitIntent() {
+  let shown = false;
+  document.addEventListener('mouseleave', e => {
+    if (e.clientY <= 0 && !shown) {
+      shown = true;
+      const overlay = $('exitOverlay');
+      if (overlay) {
+        overlay.style.display = 'flex';
+        requestAnimationFrame(() => overlay.classList.add('open'));
+      }
+    }
+  });
+  // Mobile: show after 40s of inactivity
+  let mobileTimer = setTimeout(() => {
+    if (!shown && window.innerWidth < 768) {
+      shown = true;
+      const overlay = $('exitOverlay');
+      if (overlay) {
+        overlay.style.display = 'flex';
+        requestAnimationFrame(() => overlay.classList.add('open'));
+      }
+    }
+  }, 40000);
+}
+
+function closeExit() {
+  const overlay = $('exitOverlay');
+  if (!overlay) return;
+  overlay.classList.remove('open');
+  setTimeout(() => { overlay.style.display = 'none'; }, 250);
+}
+
+// ── STICKY BAR ──
+function initStickyBar() {
+  const bar = $('stickyBar');
+  const product = $('product');
+  if (!bar || !product) return;
+
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(e => {
+      bar.classList.toggle('visible', !e.isIntersecting);
+    });
+  }, { threshold: 0 });
+
+  observer.observe(product);
+}
+
 // ── WELCOME POPUP ──
 function showWelcome() {
   const overlay = $('welcomeOverlay');
@@ -298,6 +346,8 @@ document.addEventListener('DOMContentLoaded', () => {
   initCountdown();
   restoreFormData();
   setTimeout(showWelcome, 800);
+  initExitIntent();
+  initStickyBar();
 
   // First thumb active
   const firstThumb = document.querySelector('.thumb');
