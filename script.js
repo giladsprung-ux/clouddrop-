@@ -230,6 +230,9 @@ function placeOrder(e) {
 
   closeCheckout();
 
+  // Clear saved form data after order
+  SAVED_FIELDS.forEach(id => localStorage.removeItem('cd_' + id));
+
   // Generate order number
   const orderNum = 'CD-' + Math.random().toString(36).substring(2, 8).toUpperCase();
   const el = $('successOrderNum');
@@ -257,9 +260,28 @@ function updateBuyPrice() {
   if (el) el.textContent = `$${BUNDLE_PRICES[qty].toFixed(2)}`;
 }
 
+// ── SAVE / RESTORE FORM ──
+const SAVED_FIELDS = ['firstName','lastName','email','address','city','state','zip','country'];
+
+function saveFormData() {
+  SAVED_FIELDS.forEach(id => {
+    const el = document.getElementById(id);
+    if (el) localStorage.setItem('cd_' + id, el.value);
+  });
+}
+
+function restoreFormData() {
+  SAVED_FIELDS.forEach(id => {
+    const el = document.getElementById(id);
+    const val = localStorage.getItem('cd_' + id);
+    if (el && val) el.value = val;
+  });
+}
+
 // ── INIT ──
 document.addEventListener('DOMContentLoaded', () => {
   initCountdown();
+  restoreFormData();
 
   // First thumb active
   const firstThumb = document.querySelector('.thumb');
@@ -276,5 +298,11 @@ document.addEventListener('DOMContentLoaded', () => {
   // Update buy button price on bundle change
   document.querySelectorAll('input[name="bundle"]').forEach(radio => {
     radio.addEventListener('change', updateBuyPrice);
+  });
+
+  // Auto-save form fields
+  SAVED_FIELDS.forEach(id => {
+    const el = document.getElementById(id);
+    if (el) el.addEventListener('input', saveFormData);
   });
 });
