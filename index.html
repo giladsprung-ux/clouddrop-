@@ -348,6 +348,31 @@
   </div>
 </div>
 
+<div class="modal-overlay" id="welcomeOverlay" style="display:none">
+  <div class="welcome-modal">
+    <button class="modal-close" onclick="closeWelcome()">✕</button>
+    <div class="welcome-logo"><img src="logo.png" alt="CloudDrop"></div>
+    <h2 class="welcome-title">Welcome to <span class="gradient-text">CloudDrop</span></h2>
+    <p class="welcome-sub">Join thousands who transformed their room.</p>
+    <div class="welcome-stats">
+      <div class="welcome-stat">
+        <span class="welcome-num">10,000+</span>
+        <span class="welcome-label">Happy Customers</span>
+      </div>
+      <div class="welcome-stat">
+        <span class="welcome-num">4.9 ★</span>
+        <span class="welcome-label">Average Rating</span>
+      </div>
+      <div class="welcome-stat">
+        <span class="welcome-num">#1</span>
+        <span class="welcome-label">Trending Room Decor</span>
+      </div>
+    </div>
+    <button class="btn btn-hero" style="width:100%" onclick="closeWelcome();scrollToProduct()">Shop Now →</button>
+    <p class="welcome-skip" onclick="closeWelcome()">No thanks, just browsing</p>
+  </div>
+</div>
+
 <div class="modal-overlay" id="successOverlay" style="display:none">
   <div class="success-modal">
     <div class="success-icon">🎉</div>

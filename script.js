@@ -245,6 +245,21 @@ function placeOrder(e) {
   }
 }
 
+// ── WELCOME POPUP ──
+function showWelcome() {
+  const overlay = $('welcomeOverlay');
+  if (!overlay) return;
+  overlay.style.display = 'flex';
+  requestAnimationFrame(() => overlay.classList.add('open'));
+}
+
+function closeWelcome() {
+  const overlay = $('welcomeOverlay');
+  if (!overlay) return;
+  overlay.classList.remove('open');
+  setTimeout(() => { overlay.style.display = 'none'; }, 250);
+}
+
 // ── CLOSE SUCCESS ──
 function closeSuccess() {
   const overlay = $('successOverlay');
@@ -282,6 +297,7 @@ function restoreFormData() {
 document.addEventListener('DOMContentLoaded', () => {
   initCountdown();
   restoreFormData();
+  setTimeout(showWelcome, 800);
 
   // First thumb active
   const firstThumb = document.querySelector('.thumb');
