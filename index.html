@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CloudDrop | Watch It Rain In Your Room</title>
+  <meta name="description" content="The Rain Cloud Humidifier — real water droplets, 7 mood colors, and calming rain sounds. Join 10,000+ happy customers.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="announce-bar">
+  <div class="announce-inner">
+    ⚡ Flash Sale — <strong>40% OFF</strong> + Free Worldwide Shipping · Ends in <span id="countdown" class="countdown-timer">--:--:--</span>
+  </div>
+</div>
+
+<header class="header">
+  <div class="container header-inner">
+    <a href="#" class="logo">
+      <span class="logo-icon">☁️</span>
+      <span class="logo-text">CloudDrop</span>
+    </a>
+    <nav class="header-nav">
+      <a href="#product">Shop</a>
+      <a href="#reviews">Reviews</a>
+      <a href="#faq">FAQ</a>
+    </nav>
+    <button class="btn btn-sm" onclick="scrollToProduct()">Buy Now →</button>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="container hero-inner">
+    <div class="hero-text">
+      <div class="hero-badge">🔥 2.9M TikTok Views &amp; Counting</div>
+      <h1 class="hero-title">Watch it <span class="gradient-text">rain</span><br>in your room.</h1>
+      <p class="hero-desc">The Rain Cloud Humidifier fills your space with real water droplets, 7 mood-lighting colors, and calming rain sounds — all in one device.</p>
+      <div class="hero-price-row">
+        <span class="hero-price">$49.99</span>
+        <span class="hero-orig">$79.99</span>
+        <span class="hero-save-badge">Save 40%</span>
+      </div>
+      <div class="hero-stars">
+        <span class="stars">★★★★★</span>
+        <span class="review-count">4.9 · 2,847 reviews</span>
+      </div>
+      <button class="btn btn-hero" onclick="scrollToProduct()">Get Yours Now →</button>
+      <div class="hero-trust-row">
+        <span>🔒 Secure checkout</span>
+        <span>🚚 Free shipping</span>
+        <span>↩ 30-day returns</span>
+      </div>
+    </div>
+    <div class="hero-visual">
+      <div class="hero-glow"></div>
+      <img class="hero-img"
+        src="https://bluequailwellness.myshopify.com/cdn/shop/files/ziIgbcC2aMdcGI9_416ffe0d-c008-4498-a7fa-ffd8fe28dc1a.webp?v=1735289225"
+        alt="CloudDrop Rain Cloud Humidifier"
+        onerror="this.style.display='none'">
+    </div>
+  </div>
+</section>
+
+<div class="proof-strip">
+  <div class="container proof-inner">
+    <div class="proof-item"><span class="proof-num">2.9M+</span><span class="proof-label">TikTok Views</span></div>
+    <div class="proof-divider"></div>
+    <div class="proof-item"><span class="proof-num">10,000+</span><span class="proof-label">Happy Customers</span></div>
+    <div class="proof-divider"></div>
+    <div class="proof-item"><span class="proof-num">4.9 ★</span><span class="proof-label">Average Rating</span></div>
+    <div class="proof-divider"></div>
+    <div class="proof-item"><span class="proof-num">#1</span><span class="proof-label">Trending Room Decor</span></div>
+  </div>
+</div>
+
+<section class="product-section" id="product">
+  <div class="container product-inner">
+    <div class="product-gallery">
+      <div class="gallery-main-wrap">
+        <img class="gallery-main" id="galleryMain"
+          src="https://bluequailwellness.myshopify.com/cdn/shop/files/ziIgbcC2aMdcGI9_416ffe0d-c008-4498-a7fa-ffd8fe28dc1a.webp?v=1735289225"
+          alt="Rain Cloud Humidifier">
+      </div>
+      <div class="gallery-thumbs">
+        <img class="thumb active" onclick="switchImg(this)" alt="View 1" src="https://bluequailwellness.myshopify.com/cdn/shop/files/ziIgbcC2aMdcGI9_416ffe0d-c008-4498-a7fa-ffd8fe28dc1a.webp?v=1735289225">
+        <img class="thumb" onclick="switchImg(this)" alt="View 2" src="https://bluequailwellness.myshopify.com/cdn/shop/files/BwSXU9gS5JLTrhT.webp?v=1735289223">
+        <img class="thumb" onclick="switchImg(this)" alt="View 3" src="https://bluequailwellness.myshopify.com/cdn/shop/files/Us8lYnrys5v4c2A.webp?v=1735289223">
+        <img class="thumb" onclick="switchImg(this)" alt="View 4" src="https://bluequailwellness.myshopify.com/cdn/shop/files/nSUrAouENd5xl6V.webp?v=1735289223">
+        <img class="thumb" onclick="switchImg(this)" alt="View 5" src="https://lunas2187.myshopify.com/cdn/shop/products/image_2e86811d-e6ef-4c65-9690-8a6f85e54625.jpg?v=1681097919">
+      </div>
+    </div>
+    <div class="product-info">
+      <h2 class="product-title">Rain Cloud Humidifier</h2>
+      <div class="product-rating">
+        <span class="stars">★★★★★</span>
+        <a href="#reviews" class="rating-link">2,847 reviews</a>
+      </div>
+      <div class="product-price-row">
+        <span class="product-price">$49.99</span>
+        <span class="product-orig">$79.99</span>
+        <span class="save-tag">40% OFF</span>
+      </div>
+      <p class="product-tagline">The room decor that does 3 jobs at once — and looks incredible doing them.</p>
+      <div class="bundle-section">
+        <p class="bundle-label">Choose your bundle:</p>
+        <label class="bundle-opt">
+          <input type="radio" name="bundle" value="1" checked>
+          <div class="bundle-card">
+            <div class="bundle-qty">1x CloudDrop</div>
+            <div class="bundle-cost">$49.99 &nbsp;<s>$79.99</s></div>
+          </div>
+        </label>
+        <label class="bundle-opt">
+          <input type="radio" name="bundle" value="2">
+          <div class="bundle-card">
+            <span class="bundle-popular">⭐ Most Popular</span>
+            <div class="bundle-qty">2x CloudDrop</div>
+            <div class="bundle-cost">$89.99 &nbsp;<s>$159.99</s> &nbsp;<span class="bundle-savings">Save $30!</span></div>
+          </div>
+        </label>
+      </div>
+      <button class="btn btn-buy" onclick="openCheckout()">Add to Cart — <span id="buy-price">$49.99</span></button>
+      <div class="trust-badges">
+        <div class="trust-badge">🔒 Secure Checkout</div>
+        <div class="trust-badge">🚚 Free Shipping</div>
+        <div class="trust-badge">↩ 30-Day Returns</div>
+        <div class="trust-badge">⚡ Ships in 24hrs</div>
+      </div>
+      <div class="feature-list">
+        <div class="feat">✅ Real water drip effect (not just mist)</div>
+        <div class="feat">✅ 7 color LED mood lighting + auto-cycle</div>
+        <div class="feat">✅ Built-in aroma diffuser (essential oils)</div>
+        <div class="feat">✅ Ultrasonic humidifier — adds moisture to dry air</div>
+        <div class="feat">✅ Ultra-quiet operation (&lt;30dB)</div>
+        <div class="feat">✅ 280ml tank — 8+ hours per fill</div>
+        <div class="feat">✅ USB powered — plug in anywhere</div>
+        <div class="feat">✅ Auto shut-off when tank is empty</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="benefits-section">
+  <div class="container">
+    <h2 class="section-title">Three upgrades for your room. One product.</h2>
+    <p class="section-sub">CloudDrop isn't just a pretty object — it actually does something.</p>
+    <div class="benefits-grid">
+      <div class="benefit-card"><div class="benefit-icon">💧</div><h3>Real Water Drip</h3><p>Actual water drops fall from the cloud — visible, satisfying, and mesmerizing. People stop and stare every time.</p></div>
+      <div class="benefit-card"><div class="benefit-icon">🌈</div><h3>7 Mood Colors</h3><p>Soft blue, warm pink, calm purple, nature green, and more. Tap to pick your vibe or let it cycle automatically.</p></div>
+      <div class="benefit-card"><div class="benefit-icon">🌿</div><h3>Aromatherapy Diffuser</h3><p>Add lavender, eucalyptus, or any essential oil. The mist carries the scent and fills your whole room.</p></div>
+      <div class="benefit-card"><div class="benefit-icon">🌊</div><h3>Calming Rain Sounds</h3><p>The gentle patter of water droplets creates natural ASMR. Fall asleep faster. Focus better. Stress less.</p></div>
+      <div class="benefit-card"><div class="benefit-icon">💨</div><h3>Adds Humidity</h3><p>Ultrasonic humidification keeps your air comfortable — better for your skin, throat, and sleep quality.</p></div>
+      <div class="benefit-card"><div class="benefit-icon">🎁</div><h3>The Perfect Gift</h3><p>People who receive this lose their minds. Girlfriend, best friend, mom — works for everyone, every occasion.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="how-section">
+  <div class="container">
+    <h2 class="section-title">Set up in 3 minutes flat</h2>
+    <div class="steps-row">
+      <div class="step-card"><div class="step-num">1</div><div class="step-icon">💧</div><h3>Fill the Tank</h3><p>Pour water into the 280ml base. Add a few drops of essential oil if you want aromatherapy.</p></div>
+      <div class="step-arrow">→</div>
+      <div class="step-card"><div class="step-num">2</div><div class="step-icon">🌈</div><h3>Pick a Color</h3><p>Tap the touch button to cycle through 7 LED colors. Or hold it to auto-cycle through all.</p></div>
+      <div class="step-arrow">→</div>
+      <div class="step-card"><div class="step-num">3</div><div class="step-icon">☁️</div><h3>Watch It Rain</h3><p>Drops fall from the cloud. Your room glows. The rain sounds play. You relax. That's it.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="reviews-section" id="reviews">
+  <div class="container">
+    <h2 class="section-title">People are obsessed</h2>
+    <div class="reviews-header">
+      <div class="reviews-avg">
+        <div class="avg-score">4.9</div>
+        <div class="avg-right"><div class="avg-stars">★★★★★</div><div class="avg-count">Based on 2,847 reviews</div></div>
+      </div>
+    </div>
+    <div class="reviews-grid">
+      <div class="review-card">
+        <div class="review-top"><div class="reviewer-avatar">SM</div><div><div class="reviewer-name">Sarah M.</div><div class="review-stars">★★★★★</div></div><span class="verified-badge">✓ Verified</span></div>
+        <p class="review-text">"Saw this on TikTok and immediately ordered. It's EXACTLY like in the videos — the water actually drips from the cloud and it's the most satisfying thing I've ever owned. My friends all want one."</p>
+        <div class="review-date">March 2, 2026</div>
+      </div>
+      <div class="review-card">
+        <div class="review-top"><div class="reviewer-avatar" style="background:linear-gradient(135deg,#5b8cff,#a78bfa)">JR</div><div><div class="reviewer-name">Jake R.</div><div class="review-stars">★★★★★</div></div><span class="verified-badge">✓ Verified</span></div>
+        <p class="review-text">"Got this for my girlfriend's birthday. She literally screamed. It's been on her desk every single day since. Best gift I've given in years."</p>
+        <div class="review-date">February 18, 2026</div>
+      </div>
+      <div class="review-card">
+        <div class="review-top"><div class="reviewer-avatar" style="background:linear-gradient(135deg,#06d6a0,#5b8cff)">AK</div><div><div class="reviewer-name">Alyssa K.</div><div class="review-stars">★★★★★</div></div><span class="verified-badge">✓ Verified</span></div>
+        <p class="review-text">"I fall asleep to the rain sound every night. Lavender oil + blue light = my room is a literal spa. I have bad anxiety and this has helped more than I expected."</p>
+        <div class="review-date">February 5, 2026</div>
+      </div>
+      <div class="review-card">
+        <div class="review-top"><div class="reviewer-avatar" style="background:linear-gradient(135deg,#f59e0b,#ef4444)">MT</div><div><div class="reviewer-name">Marcus T.</div><div class="review-stars">★★★★<span style="opacity:0.3">★</span></div></div><span class="verified-badge">✓ Verified</span></div>
+        <p class="review-text">"Looks even cooler in person than in photos. The glow is beautiful and the water drip is genuinely satisfying. Tank holds about 8 hours so I refill in the morning."</p>
+        <div class="review-date">January 29, 2026</div>
+      </div>
+      <div class="review-card">
+        <div class="review-top"><div class="reviewer-avatar" style="background:linear-gradient(135deg,#ec4899,#a78bfa)">EL</div><div><div class="reviewer-name">Emma L.</div><div class="review-stars">★★★★★</div></div><span class="verified-badge">✓ Verified</span></div>
+        <p class="review-text">"This is my THIRD order — one for me, one for my sister, and one for my best friend who wouldn't stop begging after she saw mine. Just buy it."</p>
+        <div class="review-date">January 14, 2026</div>
+      </div>
+      <div class="review-card">
+        <div class="review-top"><div class="reviewer-avatar" style="background:linear-gradient(135deg,#06d6a0,#a78bfa)">PS</div><div><div class="reviewer-name">Priya S.</div><div class="review-stars">★★★★★</div></div><span class="verified-badge">✓ Verified</span></div>
+        <p class="review-text">"I put eucalyptus oil in it and my room smells like a high-end spa. The ASMR of the raindrops is genuinely soothing. My roommate keeps trying to steal it."</p>
+        <div class="review-date">December 28, 2025</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="cta-banner">
+  <div class="container cta-inner">
+    <h2>Your room deserves this.</h2>
+    <p>Join 10,000+ customers who transformed their space with CloudDrop.</p>
+    <div class="cta-price-row">
+      <span class="cta-price">$49.99</span>
+      <span class="cta-orig">$79.99</span>
+      <span class="cta-save">Save 40% today</span>
+    </div>
+    <button class="btn btn-hero" onclick="scrollToProduct()">Get Mine Now →</button>
+    <div class="cta-trust"><span>🔒 Secure</span><span>🚚 Free Shipping</span><span>↩ 30-Day Returns</span></div>
+  </div>
+</section>
+
+<section class="faq-section" id="faq">
+  <div class="container">
+    <h2 class="section-title">Questions? Got answers.</h2>
+    <div class="faq-list">
+      <details class="faq-item"><summary>How does the rain cloud actually work?</summary><p>CloudDrop uses ultrasonic technology to vibrate water at high frequency, creating ultra-fine mist. A pump system simultaneously drops visible water droplets down through the cloud — that's the signature "raining" effect.</p></details>
+      <details class="faq-item"><summary>How long does the water last?</summary><p>The 280ml tank runs for approximately 6–8 hours on a single fill. The auto shut-off feature turns the unit off when water runs low.</p></details>
+      <details class="faq-item"><summary>Is it noisy? Can I sleep with it on?</summary><p>Yes! The motor operates at under 30dB — quieter than a whisper. Many customers use it specifically as a sleep aid.</p></details>
+      <details class="faq-item"><summary>Does it work with essential oils?</summary><p>Absolutely. Add 3–5 drops of any water-soluble essential oil to the tank. Lavender, eucalyptus, and peppermint are customer favorites.</p></details>
+      <details class="faq-item"><summary>How long does shipping take?</summary><p>We ship within 24 hours of your order. Standard delivery takes 7–14 days internationally. You'll receive a tracking number via email.</p></details>
+      <details class="faq-item"><summary>What's your return policy?</summary><p>We offer a 30-day no-questions-asked return policy. Contact us at <a href="mailto:giladsprung@gmail.com">giladsprung@gmail.com</a> and we'll make it right.</p></details>
+      <details class="faq-item"><summary>Is it safe to leave on overnight?</summary><p>Yes. The auto shut-off protection activates when the water level drops too low. It uses low-voltage USB power, making it completely safe for overnight use.</p></details>
+    </div>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="container footer-inner">
+    <div class="footer-brand">
+      <div class="logo"><span class="logo-icon">☁️</span><span class="logo-text">CloudDrop</span></div>
+      <p>The room decor that actually does something.</p>
+    </div>
+    <div class="footer-links">
+      <a href="#product">Shop</a>
+      <a href="#reviews">Reviews</a>
+      <a href="#faq">FAQ</a>
+      <a href="mailto:giladsprung@gmail.com">Contact Us</a>
+    </div>
+    <p class="footer-copy">© 2026 CloudDrop · <a href="mailto:giladsprung@gmail.com">giladsprung@gmail.com</a></p>
+  </div>
+</footer>
+
+<div class="modal-overlay" id="checkoutOverlay" onclick="closeCheckoutOverlay(event)">
+  <div class="checkout-modal" id="checkoutModal">
+    <button class="modal-close" onclick="closeCheckout()">✕</button>
+    <div class="step-indicators">
+      <div class="step-ind active" id="step-ind-1"><span class="step-ind-num">1</span><span class="step-ind-label">Shipping</span></div>
+      <div class="step-ind-line"></div>
+      <div class="step-ind" id="step-ind-2"><span class="step-ind-num">2</span><span class="step-ind-label">Payment</span></div>
+    </div>
+    <div id="step1">
+      <h3 class="modal-title">Where should we ship it?</h3>
+      <div class="order-summary-mini">
+        <span class="osm-name">☁️ Rain Cloud Humidifier</span>
+        <span class="osm-qty" id="osm-qty">× 1</span>
+        <span class="osm-price" id="osm-price">$49.99</span>
+      </div>
+      <form id="shippingForm" onsubmit="proceedToPayment(event)">
+        <div class="form-row">
+          <div class="form-group"><label>First Name</label><input type="text" id="firstName" placeholder="Sarah" required></div>
+          <div class="form-group"><label>Last Name</label><input type="text" id="lastName" placeholder="Johnson" required></div>
+        </div>
+        <div class="form-group"><label>Email</label><input type="email" id="email" placeholder="sarah@example.com" required></div>
+        <div class="form-group"><label>Street Address</label><input type="text" id="address" placeholder="123 Main Street" required></div>
+        <div class="form-row">
+          <div class="form-group"><label>City</label><input type="text" id="city" placeholder="New York" required></div>
+          <div class="form-group"><label>State / Province</label><input type="text" id="state" placeholder="NY" required></div>
+        </div>
+        <div class="form-row">
+          <div class="form-group"><label>ZIP / Postal Code</label><input type="text" id="zip" placeholder="10001" required></div>
+          <div class="form-group">
+            <label>Country</label>
+            <select id="country" required>
+              <option value="">Select country…</option>
+              <optgroup label="🌎 Americas">
+                <option value="US">🇺🇸 United States</option><option value="CA">🇨🇦 Canada</option><option value="MX">🇲🇽 Mexico</option><option value="BR">🇧🇷 Brazil</option><option value="AR">🇦🇷 Argentina</option><option value="CL">🇨🇱 Chile</option><option value="CO">🇨🇴 Colombia</option><option value="PE">🇵🇪 Peru</option>
+              </optgroup>
+              <optgroup label="🌍 Europe">
+                <option value="GB">🇬🇧 United Kingdom</option><option value="DE">🇩🇪 Germany</option><option value="FR">🇫🇷 France</option><option value="IT">🇮🇹 Italy</option><option value="ES">🇪🇸 Spain</option><option value="NL">🇳🇱 Netherlands</option><option value="BE">🇧🇪 Belgium</option><option value="SE">🇸🇪 Sweden</option><option value="NO">🇳🇴 Norway</option><option value="DK">🇩🇰 Denmark</option><option value="FI">🇫🇮 Finland</option><option value="PL">🇵🇱 Poland</option><option value="PT">🇵🇹 Portugal</option><option value="AT">🇦🇹 Austria</option><option value="CH">🇨🇭 Switzerland</option><option value="IE">🇮🇪 Ireland</option><option value="CZ">🇨🇿 Czech Republic</option><option value="HU">🇭🇺 Hungary</option><option value="RO">🇷🇴 Romania</option><option value="GR">🇬🇷 Greece</option><option value="UA">🇺🇦 Ukraine</option><option value="IL">🇮🇱 Israel</option>
+              </optgroup>
+              <optgroup label="🌏 Asia Pacific">
+                <option value="AU">🇦🇺 Australia</option><option value="NZ">🇳🇿 New Zealand</option><option value="JP">🇯🇵 Japan</option><option value="KR">🇰🇷 South Korea</option><option value="SG">🇸🇬 Singapore</option><option value="MY">🇲🇾 Malaysia</option><option value="TH">🇹🇭 Thailand</option><option value="PH">🇵🇭 Philippines</option><option value="ID">🇮🇩 Indonesia</option><option value="VN">🇻🇳 Vietnam</option><option value="IN">🇮🇳 India</option><option value="HK">🇭🇰 Hong Kong</option><option value="TW">🇹🇼 Taiwan</option>
+              </optgroup>
+              <optgroup label="🌍 Middle East &amp; Africa">
+                <option value="AE">🇦🇪 UAE</option><option value="SA">🇸🇦 Saudi Arabia</option><option value="QA">🇶🇦 Qatar</option><option value="KW">🇰🇼 Kuwait</option><option value="TR">🇹🇷 Turkey</option><option value="ZA">🇿🇦 South Africa</option><option value="EG">🇪🇬 Egypt</option><option value="NG">🇳🇬 Nigeria</option><option value="KE">🇰🇪 Kenya</option><option value="MA">🇲🇦 Morocco</option>
+              </optgroup>
+            </select>
+          </div>
+        </div>
+        <button type="submit" class="btn btn-buy" style="width:100%;margin-top:4px">Continue to Payment →</button>
+      </form>
+    </div>
+    <div id="step2" style="display:none">
+      <h3 class="modal-title">Secure Payment</h3>
+      <div class="address-review">
+        <span class="addr-label">📦 Shipping to:</span>
+        <span class="addr-text" id="addrText"></span>
+        <button class="addr-edit" onclick="backToShipping()">Edit</button>
+      </div>
+      <div class="order-summary-box">
+        <div class="os-row"><span>☁️ Rain Cloud Humidifier <span id="os-qty-label"></span></span><span id="os-subtotal"></span></div>
+        <div class="os-row"><span>🚚 Shipping</span><span class="free-tag">FREE</span></div>
+        <div class="os-divider"></div>
+        <div class="os-row os-total"><strong>Total</strong><strong id="os-total"></strong></div>
+      </div>
+      <form id="paymentForm" onsubmit="placeOrder(event)">
+        <div class="card-brands">
+          <div class="card-brand" id="brand-visa"><svg width="40" height="26" viewBox="0 0 40 26" fill="none"><rect width="40" height="26" rx="4" fill="#1A1F71"/><path d="M16.2 17.5h-2.4l1.5-9.3h2.4L16.2 17.5zm8.2-9.1c-.5-.18-1.2-.37-2.2-.37-2.38 0-4.06 1.27-4.07 3.07-.02 1.34 1.19 2.09 2.1 2.54.93.46 1.24.75 1.24 1.16-.01.63-.74.91-1.43.91-.96 0-1.47-.14-2.26-.48l-.31-.15-.34 2.06c.56.26 1.6.49 2.68.5 2.52 0 4.16-1.24 4.18-3.17.01-1.06-.63-1.86-2.01-2.53-.84-.43-1.35-.71-1.35-1.15 0-.38.44-.79 1.38-.79.79-.01 1.36.17 1.8.35l.21.1.34-2.05zm5.3-.16h-1.86c-.58 0-1.01.17-1.26.77l-3.56 8.53h2.51l.5-1.39h3.07l.29 1.39H31L29.7 8.23zm-2.97 6.1l.94-2.57.28-.74.15.71.49 2.6h-1.86zm-20.2-6.1L4.3 14.33l-.25-1.28C3.61 11.6 2.23 9.97.7 9.15l2.16 8.22h2.53l3.78-9.31H6.55z" fill="white"/></svg></div>
+          <div class="card-brand" id="brand-mc"><svg width="40" height="26" viewBox="0 0 40 26" fill="none"><rect width="40" height="26" rx="4" fill="#252525"/><circle cx="15" cy="13" r="8" fill="#EB001B"/><circle cx="25" cy="13" r="8" fill="#F79E1B"/><path d="M20 6.5a8 8 0 0 1 0 13A8 8 0 0 1 20 6.5z" fill="#FF5F00"/></svg></div>
+          <div class="card-brand" id="brand-amex"><svg width="40" height="26" viewBox="0 0 40 26" fill="none"><rect width="40" height="26" rx="4" fill="#2E77BC"/><text x="20" y="17" text-anchor="middle" font-size="9" font-weight="bold" fill="white" font-family="Arial">AMEX</text></svg></div>
+          <div class="card-brand" id="brand-disc"><svg width="40" height="26" viewBox="0 0 40 26" fill="none"><rect width="40" height="26" rx="4" fill="#231F20"/><ellipse cx="26" cy="13" rx="10" ry="8" fill="#F76F20"/><text x="10" y="17" font-size="7" font-weight="bold" fill="white" font-family="Arial">DISC</text></svg></div>
+        </div>
+        <div class="form-group"><label>Card Number <span id="card-type-label" style="color:var(--accent);font-weight:600;text-transform:none"></span></label><input type="text" id="cardNum" placeholder="1234 5678 9012 3456" maxlength="19" inputmode="numeric" required></div>
+        <div class="form-row">
+          <div class="form-group"><label>Expiry</label><input type="text" id="expiry" placeholder="MM/YY" maxlength="5" required></div>
+          <div class="form-group"><label>CVV</label><input type="text" id="cvv" placeholder="123" maxlength="4" inputmode="numeric" required></div>
+        </div>
+        <div class="form-group"><label>Name on Card</label><input type="text" id="cardName" placeholder="Sarah Johnson" required></div>
+        <div class="sec-badges">
+          <span class="sec-badge">🔒 SSL Encrypted</span>
+          <span class="sec-badge">🛡️ Secure Payment</span>
+          <span class="sec-badge">✅ PCI Compliant</span>
+        </div>
+        <button type="submit" class="btn btn-buy" style="width:100%;margin-top:8px">🔒 Place Order — <span id="pay-total"></span></button>
+      </form>
+    </div>
+  </div>
+</div>
+
+<div class="modal-overlay" id="successOverlay" style="display:none">
+  <div class="success-modal">
+    <div class="success-icon">🎉</div>
+    <h2>Order Placed!</h2>
+    <p>Your Rain Cloud Humidifier is on its way. Check your email for tracking details.</p>
+    <div class="success-order" id="successOrderNum"></div>
+    <div class="success-detail">Estimated delivery: 7–14 business days</div>
+    <button class="btn btn-buy" onclick="closeSuccess()" style="margin-top:20px;width:100%">Done</button>
+  </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
