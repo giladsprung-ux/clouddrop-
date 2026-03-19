@@ -10,7 +10,8 @@
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
     body { font-family: 'Inter', sans-serif; background: #07091a; color: #eef2ff; line-height: 1.7; }
     a { color: #5b8cff; }
-    header { padding: 20px 40px; border-bottom: 1px solid #1e2850; display: flex; align-items: center; gap: 10px; }
+    header { padding: 20px 40px; border-bottom: 1px solid #1e2850; display: flex; align-items: center; justify-content: space-between; gap: 10px; }
+    .back-btn { background: linear-gradient(135deg,#5b8cff,#a78bfa); color: #fff; text-decoration: none; padding: 9px 18px; border-radius: 10px; font-size: 13px; font-weight: 700; }
     .logo { display: flex; align-items: center; gap: 8px; text-decoration: none; }
     .logo img { width: 28px; height: 28px; }
     .logo-text { font-size: 20px; font-weight: 800; background: linear-gradient(135deg, #5b8cff, #a78bfa); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
@@ -32,6 +33,7 @@
     <img src="logo.png" alt="CloudDrop">
     <span class="logo-text">CloudDrop</span>
   </a>
+  <a href="index.html" class="back-btn">← Back to Store</a>
 </header>
 
 <div class="container">
