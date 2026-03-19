@@ -80,7 +80,7 @@ body {
   text-decoration: none;
 }
 
-.logo-icon { font-size: 20px; }
+.logo-img { width: 32px; height: 32px; object-fit: contain; }
 
 .logo-text {
   font-size: 22px;
