@@ -1,5 +1,7 @@
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
+html { scroll-behavior: smooth; }
+
 :root {
   --bg: #07091a;
   --surface: #0d1128;
@@ -1198,60 +1200,80 @@ body {
 @media (max-width: 900px) {
   .container { padding: 0 20px; }
 
-  .hero-inner {
-    flex-direction: column;
-    text-align: center;
-    gap: 40px;
-    padding: 0;
-  }
+  /* Header */
+  .header-nav { display: none; }
 
-  .hero { padding: 60px 0; }
-  .hero-img { width: 300px; height: 300px; }
-  .hero-trust-row { justify-content: center; }
-  .hero-price-row { justify-content: center; }
-  .hero-stars { justify-content: center; }
+  /* Hero */
+  .hero { padding: 48px 0 60px; }
+  .hero-inner { flex-direction: column; text-align: center; gap: 32px; }
   .hero-visual { order: -1; }
+  .hero-glow { inset: -40px; }
+  .hero-img { width: 280px; height: 280px; border-radius: 20px; }
+  .hero-trust-row, .hero-price-row, .hero-stars { justify-content: center; }
+  .hero-actions { justify-content: center; }
 
-  .product-inner { flex-direction: column; gap: 32px; }
+  /* Proof strip */
+  .proof-divider { display: none; }
+  .proof-inner { flex-wrap: wrap; gap: 4px; }
+  .proof-item { padding: 10px 16px; flex: 1 1 40%; }
+
+  /* Product */
+  .product-section { padding: 48px 0; }
+  .product-inner { flex-direction: column; gap: 28px; }
   .product-gallery { position: static; }
   .gallery-thumbs { justify-content: center; }
 
-  .header-nav { display: none; }
-  .proof-divider { display: none; }
-  .proof-inner { gap: 8px; }
-  .proof-item { padding: 8px 20px; }
-
-  .footer-inner { flex-direction: column; gap: 16px; }
-  .footer-copy { text-align: center; }
-
-  .benefits-section, .faq-section, .reviews-section, .product-section { padding: 60px 0; }
-  .how-section { padding: 60px 0; }
-  .cta-banner { padding: 60px 0; }
-
+  /* Sections */
+  .benefits-section, .faq-section, .reviews-section { padding: 56px 0; }
+  .how-section { padding: 56px 0; }
+  .cta-banner { padding: 56px 0; }
   .reviews-header { display: none; }
+
+  /* Footer */
+  .footer-inner { flex-direction: column; gap: 20px; }
+  .footer-copy { text-align: center; }
 }
 
 @media (max-width: 768px) {
   .benefits-grid { grid-template-columns: 1fr; }
   .reviews-grid { grid-template-columns: 1fr; }
   .steps-row { flex-direction: column; align-items: center; }
-  .step-arrow { transform: rotate(90deg); font-size: 18px; }
+  .step-arrow { transform: rotate(90deg); font-size: 18px; margin: 0; }
+  .step-card { max-width: 300px; width: 100%; }
   .cta-price-row { flex-wrap: wrap; justify-content: center; }
-  .trust-badges { justify-content: center; }
+  .trust-badges { justify-content: flex-start; }
   .bundle-opt { width: 100%; }
+  .feature-list { display: grid; grid-template-columns: 1fr 1fr; gap: 2px; }
 }
 
 @media (max-width: 580px) {
-  .hero-title { font-size: 30px; letter-spacing: -0.5px; }
-  .hero-img { width: 260px; height: 260px; }
-  .checkout-modal { padding: 24px 16px; margin: 0 10px; border-radius: 16px; }
-  .form-row { flex-direction: column; }
-  .hero-badge { font-size: 11px; }
-  .section-title { font-size: 26px; }
-  .cta-inner h2 { font-size: 26px; }
-  .welcome-modal, .exit-modal { padding: 32px 20px; margin: 0 12px; }
+  .hero-title { font-size: 28px; letter-spacing: -0.5px; }
+  .hero-img { width: 240px; height: 240px; }
+  .hero-desc { font-size: 15px; }
+  .hero-price { font-size: 32px; }
+
+  .section-title { font-size: 24px; }
+  .cta-inner h2 { font-size: 24px; }
+  .cta-price { font-size: 34px; }
+
+  .product-title { font-size: 22px; }
+  .product-price { font-size: 28px; }
+  .feature-list { grid-template-columns: 1fr; }
+
+  .proof-item { flex: 1 1 100%; border-bottom: 1px solid var(--border); }
+  .proof-item:last-child { border-bottom: none; }
+
+  .checkout-modal { padding: 20px 14px; margin: 0 8px; border-radius: 16px; max-height: 95vh; }
+  .form-row { flex-direction: column; gap: 0; }
+
+  .welcome-modal, .exit-modal { padding: 28px 18px; margin: 0 10px; border-radius: 20px; }
   .welcome-stats { gap: 0; }
-  .welcome-num { font-size: 18px; }
-  .product-title { font-size: 24px; }
-  .product-price { font-size: 30px; }
+  .welcome-num { font-size: 17px; }
+  .welcome-title { font-size: 22px; }
+
+  .hero-badge { font-size: 11px; padding: 4px 10px; }
+  .btn-hero { padding: 14px 28px; font-size: 15px; }
+
+  .card-brands { gap: 6px; }
+  .card-brands svg { width: 34px; height: 22px; }
 }

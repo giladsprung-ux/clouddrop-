@@ -20,16 +20,14 @@ function initCountdown() {
     localStorage.setItem(KEY, end);
   }
 
-  const el = $('countdown');
-  if (!el) return;
-
   function tick() {
     const diff = end - Date.now();
-    if (diff <= 0) { el.textContent = '00:00:00'; return; }
-    const h = String(Math.floor(diff / 3600000)).padStart(2, '0');
-    const m = String(Math.floor((diff % 3600000) / 60000)).padStart(2, '0');
-    const s = String(Math.floor((diff % 60000) / 1000)).padStart(2, '0');
-    el.textContent = `${h}:${m}:${s}`;
+    const h = String(Math.max(0, Math.floor(diff / 3600000))).padStart(2, '0');
+    const m = String(Math.max(0, Math.floor((diff % 3600000) / 60000))).padStart(2, '0');
+    const s = String(Math.max(0, Math.floor((diff % 60000) / 1000))).padStart(2, '0');
+    const text = diff <= 0 ? '00:00:00' : `${h}:${m}:${s}`;
+    // Update all countdown elements on page
+    document.querySelectorAll('.countdown-timer').forEach(el => el.textContent = text);
   }
 
   tick();
@@ -248,27 +246,26 @@ function placeOrder(e) {
 // ── EXIT INTENT ──
 function initExitIntent() {
   let shown = false;
+
+  function showExitPopup() {
+    if (shown) return;
+    shown = true;
+    const overlay = $('exitOverlay');
+    if (overlay) {
+      overlay.style.display = 'flex';
+      requestAnimationFrame(() => overlay.classList.add('open'));
+    }
+  }
+
+  // Desktop: mouse leaves top of page
   document.addEventListener('mouseleave', e => {
-    if (e.clientY <= 0 && !shown) {
-      shown = true;
-      const overlay = $('exitOverlay');
-      if (overlay) {
-        overlay.style.display = 'flex';
-        requestAnimationFrame(() => overlay.classList.add('open'));
-      }
-    }
+    if (e.clientY <= 0) showExitPopup();
   });
-  // Mobile: show after 40s of inactivity
-  let mobileTimer = setTimeout(() => {
-    if (!shown && window.innerWidth < 768) {
-      shown = true;
-      const overlay = $('exitOverlay');
-      if (overlay) {
-        overlay.style.display = 'flex';
-        requestAnimationFrame(() => overlay.classList.add('open'));
-      }
-    }
-  }, 40000);
+
+  // Mobile: show after 45s on page
+  setTimeout(() => {
+    if (window.innerWidth < 768) showExitPopup();
+  }, 45000);
 }
 
 function closeExit() {
@@ -284,9 +281,13 @@ function initStickyBar() {
   const product = $('product');
   if (!bar || !product) return;
 
+  let productSeen = false;
+
   const observer = new IntersectionObserver(entries => {
     entries.forEach(e => {
-      bar.classList.toggle('visible', !e.isIntersecting);
+      if (e.isIntersecting) productSeen = true;
+      // Only show bar after product section has been seen and is now out of view
+      bar.classList.toggle('visible', productSeen && !e.isIntersecting);
     });
   }, { threshold: 0 });
 
@@ -306,6 +307,7 @@ function closeWelcome() {
   if (!overlay) return;
   overlay.classList.remove('open');
   setTimeout(() => { overlay.style.display = 'none'; }, 250);
+  sessionStorage.setItem('cd_welcomed', '1');
 }
 
 // ── CLOSE SUCCESS ──
@@ -345,7 +347,9 @@ function restoreFormData() {
 document.addEventListener('DOMContentLoaded', () => {
   initCountdown();
   restoreFormData();
-  setTimeout(showWelcome, 800);
+  if (!sessionStorage.getItem('cd_welcomed')) {
+    setTimeout(showWelcome, 800);
+  }
   initExitIntent();
   initStickyBar();
 
