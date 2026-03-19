@@ -1,6 +1,12 @@
 // ── BUNDLE PRICES ──
 const BUNDLE_PRICES = { 1: 49.99, 2: 89.99 };
 
+// ── STRIPE PAYMENT LINKS ──
+const STRIPE_LINKS = {
+  1: 'https://buy.stripe.com/test_fZucMXazkfxQgIF5LD04802',
+  2: 'https://buy.stripe.com/test_28E9AL36S2L4gIFca104801'
+};
+
 // ── UTILS ──
 function $ (id) { return document.getElementById(id); }
 
@@ -46,20 +52,7 @@ function switchImg(thumb) {
 // ── CHECKOUT OPEN/CLOSE ──
 function openCheckout() {
   const qty = getSelectedQty();
-  const price = BUNDLE_PRICES[qty];
-
-  // Update mini order summary
-  const osmQty = $('osm-qty');
-  const osmPrice = $('osm-price');
-  if (osmQty) osmQty.textContent = `× ${qty}`;
-  if (osmPrice) osmPrice.textContent = `$${price.toFixed(2)}`;
-
-  const overlay = $('checkoutOverlay');
-  if (overlay) {
-    overlay.style.display = 'flex';
-    requestAnimationFrame(() => overlay.classList.add('open'));
-  }
-  showStep(1);
+  window.location.href = STRIPE_LINKS[qty];
 }
 
 function closeCheckout() {
