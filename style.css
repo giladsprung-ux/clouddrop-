@@ -20,7 +20,7 @@ html { scroll-behavior: smooth; }
 }
 
 body {
-  font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  font-family: 'DM Sans', -apple-system, BlinkMacSystemFont, sans-serif;
   background: var(--bg);
   color: var(--text);
   line-height: 1.6;
@@ -504,12 +504,6 @@ body {
 
 .benefit-card:hover { transform: translateY(-4px); }
 
-.benefit-card:nth-child(1) { border-top: 3px solid #5b8cff; }
-.benefit-card:nth-child(2) { border-top: 3px solid #a78bfa; }
-.benefit-card:nth-child(3) { border-top: 3px solid #06d6a0; }
-.benefit-card:nth-child(4) { border-top: 3px solid #ff6b9d; }
-.benefit-card:nth-child(5) { border-top: 3px solid #f59e0b; }
-.benefit-card:nth-child(6) { border-top: 3px solid #ef4444; }
 
 .benefit-icon {
   font-size: 28px;
