@@ -1,5 +1,5 @@
 // ── BUNDLE PRICES ──
-const BUNDLE_PRICES = { 1: 49.99, 2: 89.99 };
+const BUNDLE_PRICES = { 1: 25.00, 2: 45.00 };
 
 // ── STRIPE PAYMENT LINKS ──
 const STRIPE_LINKS = {
