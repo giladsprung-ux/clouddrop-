@@ -3,45 +3,165 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Privacy Policy & Terms — CloudDrop</title>
+  <title>Privacy Policy &amp; Terms — RollLuxe</title>
   <link rel="icon" type="image/png" href="logo.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-    body { font-family: 'Inter', sans-serif; background: #07091a; color: #eef2ff; line-height: 1.7; }
-    a { color: #5b8cff; }
-    header { padding: 20px 40px; border-bottom: 1px solid #1e2850; display: flex; align-items: center; justify-content: space-between; gap: 10px; }
-    .back-btn { background: linear-gradient(135deg,#5b8cff,#a78bfa); color: #fff; text-decoration: none; padding: 9px 18px; border-radius: 10px; font-size: 13px; font-weight: 700; }
-    .logo { display: flex; align-items: center; gap: 8px; text-decoration: none; }
-    .logo img { width: 28px; height: 28px; }
-    .logo-text { font-size: 20px; font-weight: 800; background: linear-gradient(135deg, #5b8cff, #a78bfa); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
-    .container { max-width: 760px; margin: 0 auto; padding: 60px 24px; }
-    h1 { font-size: 36px; font-weight: 900; margin-bottom: 8px; }
-    .updated { color: #7988b0; font-size: 13px; margin-bottom: 48px; }
-    h2 { font-size: 20px; font-weight: 700; margin: 36px 0 12px; color: #a78bfa; }
-    p { color: #7988b0; font-size: 15px; margin-bottom: 14px; }
-    ul { color: #7988b0; font-size: 15px; padding-left: 20px; margin-bottom: 14px; }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background: #0a0a0a;
+      color: #f5f0e8;
+      line-height: 1.7;
+    }
+
+    a { color: #c9a84c; text-decoration: none; }
+    a:hover { color: #e8cc7a; text-decoration: underline; }
+
+    header {
+      padding: 20px 40px;
+      border-bottom: 1px solid #2a2a2a;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 10px;
+    }
+
+    .back-btn {
+      background: transparent;
+      border: 1px solid #c9a84c;
+      color: #c9a84c;
+      text-decoration: none;
+      padding: 9px 18px;
+      border-radius: 2px;
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      transition: background 0.2s, color 0.2s;
+    }
+
+    .back-btn:hover {
+      background: #c9a84c;
+      color: #0a0a0a;
+      text-decoration: none;
+    }
+
+    .logo {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      text-decoration: none;
+      gap: 2px;
+    }
+
+    .logo-text {
+      font-size: 20px;
+      font-weight: 800;
+      color: #e8cc7a;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      line-height: 1;
+    }
+
+    .logo-sub {
+      font-size: 8px;
+      letter-spacing: 2.5px;
+      text-transform: uppercase;
+      color: #888880;
+      line-height: 1;
+    }
+
+    .container {
+      max-width: 760px;
+      margin: 0 auto;
+      padding: 60px 24px;
+    }
+
+    h1 {
+      font-size: 36px;
+      font-weight: 800;
+      margin-bottom: 8px;
+      color: #f5f0e8;
+      letter-spacing: -0.5px;
+    }
+
+    .updated {
+      color: #888880;
+      font-size: 13px;
+      margin-bottom: 48px;
+    }
+
+    h2 {
+      font-size: 16px;
+      font-weight: 700;
+      margin: 36px 0 12px;
+      color: #c9a84c;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+
+    p {
+      color: #888880;
+      font-size: 15px;
+      margin-bottom: 14px;
+      line-height: 1.75;
+    }
+
+    ul {
+      color: #888880;
+      font-size: 15px;
+      padding-left: 20px;
+      margin-bottom: 14px;
+      line-height: 1.75;
+    }
+
     li { margin-bottom: 6px; }
-    .divider { height: 1px; background: #1e2850; margin: 60px 0; }
-    footer { text-align: center; padding: 30px; color: #7988b0; font-size: 13px; border-top: 1px solid #1e2850; }
+
+    .divider {
+      height: 1px;
+      background: #2a2a2a;
+      margin: 60px 0;
+    }
+
+    footer {
+      text-align: center;
+      padding: 30px;
+      color: #888880;
+      font-size: 13px;
+      border-top: 1px solid #2a2a2a;
+      letter-spacing: 0.3px;
+    }
+
+    footer a { color: #888880; }
+    footer a:hover { color: #c9a84c; text-decoration: none; }
+
+    @media (max-width: 600px) {
+      header { padding: 16px 20px; }
+      .container { padding: 40px 16px; }
+      h1 { font-size: 26px; }
+    }
   </style>
 </head>
 <body>
 
 <header>
   <a href="index.html" class="logo">
-    <img src="logo.png" alt="CloudDrop">
-    <span class="logo-text">CloudDrop</span>
+    <span class="logo-text">RollLuxe</span>
+    <span class="logo-sub">Premium Sushi Craft</span>
   </a>
   <a href="index.html" class="back-btn">← Back to Store</a>
 </header>
 
 <div class="container">
   <h1>Privacy Policy</h1>
-  <p class="updated">Last updated: March 19, 2026</p>
+  <p class="updated">Last updated: March 31, 2026</p>
 
   <h2>1. Information We Collect</h2>
-  <p>When you place an order, we collect your name, email address, shipping address, and payment information. Payment details are processed securely by Stripe and are never stored on our servers.</p>
+  <p>When you place an order for the RollLuxe Premium Sushi Making Kit, we collect your name, email address, shipping address, and payment information. Payment details are processed securely by Shopify and are never stored on our servers.</p>
 
   <h2>2. How We Use Your Information</h2>
   <ul>
@@ -52,48 +172,48 @@
   </ul>
 
   <h2>3. Sharing Your Information</h2>
-  <p>We do not sell or rent your personal information. We share your shipping address only with our fulfillment partners to deliver your order. Payments are processed by Stripe, Inc., which has its own privacy policy.</p>
+  <p>We do not sell or rent your personal information. We share your shipping address only with our fulfillment partners to deliver your order. Payments are processed by Shopify, Inc., which has its own privacy policy.</p>
 
   <h2>4. Cookies</h2>
   <p>We use local storage to remember your form information across sessions to improve your shopping experience. We do not use third-party tracking cookies.</p>
 
   <h2>5. Data Security</h2>
-  <p>We use industry-standard SSL encryption. All payment processing is handled by Stripe, which is PCI-DSS compliant.</p>
+  <p>We use industry-standard SSL encryption. All payment processing is handled by Shopify, which is PCI-DSS compliant.</p>
 
   <h2>6. Your Rights</h2>
-  <p>You may request access to, correction of, or deletion of your personal data by emailing us at <a href="https://mail.google.com/mail/?view=cm&to=giladsprung@gmail.com">support@clouddrop.com</a>.</p>
+  <p>You may request access to, correction of, or deletion of your personal data by emailing us at <a href="https://mail.google.com/mail/?view=cm&to=giladsprung@gmail.com">support@rollluxe.com</a>.</p>
 
   <h2>7. Contact</h2>
-  <p>Questions? Email us at <a href="https://mail.google.com/mail/?view=cm&to=giladsprung@gmail.com">support@clouddrop.com</a>. We respond within 24 hours.</p>
+  <p>Questions? Email us at <a href="https://mail.google.com/mail/?view=cm&to=giladsprung@gmail.com">support@rollluxe.com</a>. We respond within 24 hours.</p>
 
   <div class="divider" id="terms"></div>
 
   <h1>Terms of Service</h1>
-  <p class="updated">Last updated: March 19, 2026</p>
+  <p class="updated">Last updated: March 31, 2026</p>
 
   <h2>1. Products</h2>
-  <p>CloudDrop sells the Rain Cloud Humidifier. Product images are representative. Slight color variations may occur due to screen settings.</p>
+  <p>RollLuxe sells the RollLuxe Premium Sushi Making Kit. Product images are representative. Slight color variations may occur due to screen settings.</p>
 
   <h2>2. Pricing</h2>
   <p>All prices are in USD. We reserve the right to change prices at any time. Sale prices are valid while the sale is active.</p>
 
-  <h2>3. Orders & Payment</h2>
-  <p>By placing an order you confirm that the payment information provided is accurate and that you are authorized to use the payment method. Orders are processed through Stripe.</p>
+  <h2>3. Orders &amp; Payment</h2>
+  <p>By placing an order you confirm that the payment information provided is accurate and that you are authorized to use the payment method. Orders are processed through Shopify.</p>
 
   <h2>4. Shipping</h2>
   <p>We offer free worldwide shipping on all orders. Estimated delivery is 7–14 business days. We are not responsible for delays caused by customs or carrier issues outside our control.</p>
 
-  <h2>5. Returns & Refunds</h2>
-  <p>We offer a 30-day no-questions-asked return policy. To initiate a return, contact us at <a href="https://mail.google.com/mail/?view=cm&to=giladsprung@gmail.com">support@clouddrop.com</a>. Refunds are processed within 5–10 business days.</p>
+  <h2>5. Returns &amp; Refunds</h2>
+  <p>We offer a 30-day no-questions-asked return policy. To initiate a return, contact us at <a href="https://mail.google.com/mail/?view=cm&to=giladsprung@gmail.com">support@rollluxe.com</a>. Refunds are processed within 5–10 business days.</p>
 
   <h2>6. Limitation of Liability</h2>
-  <p>CloudDrop shall not be liable for any indirect, incidental, or consequential damages arising from the use of our products or website.</p>
+  <p>RollLuxe shall not be liable for any indirect, incidental, or consequential damages arising from the use of our products or website.</p>
 
   <h2>7. Contact</h2>
-  <p>For any questions regarding these terms, contact us at <a href="https://mail.google.com/mail/?view=cm&to=giladsprung@gmail.com">support@clouddrop.com</a>.</p>
+  <p>For any questions regarding these terms, contact us at <a href="https://mail.google.com/mail/?view=cm&to=giladsprung@gmail.com">support@rollluxe.com</a>.</p>
 </div>
 
-<footer>© 2026 CloudDrop · <a href="index.html">Back to Store</a></footer>
+<footer>© 2026 RollLuxe &nbsp;·&nbsp; <a href="index.html">Back to Store</a></footer>
 
 </body>
 </html>
