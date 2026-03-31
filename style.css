@@ -1489,3 +1489,5 @@ body {
   .card-brands { gap: 6px; }
   .card-brands svg { width: 34px; height: 22px; }
 }
+
+.shopify-buy-frame--toggle { display: none !important; }
