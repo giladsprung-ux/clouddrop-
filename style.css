@@ -1593,7 +1593,13 @@ body {
   background: var(--surface);
 }
 
+@media (max-width: 900px) {
+  .video-section { padding: 48px 0; }
+  .video-wrap { max-width: 100%; }
+}
+
 @media (max-width: 580px) {
+  .video-section { padding: 36px 0; }
   .video-wrap { border-radius: 8px; }
 }
 
@@ -1659,8 +1665,17 @@ body {
   letter-spacing: 0.5px;
 }
 
+@media (max-width: 900px) {
+  .specs-section { padding: 48px 0; }
+  .specs-img-wrap { max-width: 100%; margin-bottom: 32px; }
+}
+
 @media (max-width: 580px) {
+  .specs-section { padding: 36px 0; }
   .specs-grid { grid-template-columns: repeat(2, 1fr); }
+  .spec-card { padding: 20px 12px; }
+  .spec-value { font-size: 22px; }
+  .spec-label { font-size: 9px; letter-spacing: 2px; }
 }
 
 /* ── GUARANTEE SECTION ── */
@@ -1698,13 +1713,17 @@ body {
   line-height: 1.7;
 }
 
+@media (max-width: 900px) {
+  .mobile-menu-btn { display: flex; }
+  .guarantee-section { padding: 32px 0; }
+}
+
 @media (max-width: 580px) {
   .mobile-menu-btn { display: flex; }
   .guarantee-inner { flex-direction: column; text-align: center; gap: 16px; }
   .guarantee-text h3 { font-size: 20px; }
+  .guarantee-icon { font-size: 40px; }
   .viewing-now { display: none; }
-}
-
-@media (max-width: 900px) {
-  .mobile-menu-btn { display: flex; }
+  .review-photo { height: 140px; }
+  .specs-img-wrap { margin-bottom: 24px; }
 }
