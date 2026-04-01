@@ -1574,6 +1574,29 @@ body {
 
 .mobile-menu a:hover { color: var(--gold); }
 
+/* ── VIDEO SECTION ── */
+.video-section { padding: 80px 0; }
+
+.video-wrap {
+  max-width: 480px;
+  margin: 0 auto;
+  border-radius: 16px;
+  overflow: hidden;
+  border: 1px solid var(--border);
+  box-shadow: 0 0 60px rgba(201,168,76,0.08);
+  position: relative;
+}
+
+.video-wrap video {
+  width: 100%;
+  display: block;
+  background: var(--surface);
+}
+
+@media (max-width: 580px) {
+  .video-wrap { border-radius: 8px; }
+}
+
 /* ── SPECS SECTION ── */
 .specs-section { padding: 80px 0; }
 
