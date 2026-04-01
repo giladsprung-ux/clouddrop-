@@ -16,29 +16,6 @@ function scrollToProduct() {
   if (el) el.scrollIntoView({ behavior: 'smooth', block: 'start' });
 }
 
-// ── COUNTDOWN TIMER ──
-function initCountdown() {
-  const KEY = 'clouddrop_sale_end';
-  let end = parseInt(localStorage.getItem(KEY));
-  if (!end || end < Date.now()) {
-    const hours = 4 + Math.random() * 6;
-    end = Date.now() + hours * 3600000;
-    localStorage.setItem(KEY, end);
-  }
-
-  function tick() {
-    const diff = end - Date.now();
-    const h = String(Math.max(0, Math.floor(diff / 3600000))).padStart(2, '0');
-    const m = String(Math.max(0, Math.floor((diff % 3600000) / 60000))).padStart(2, '0');
-    const s = String(Math.max(0, Math.floor((diff % 60000) / 1000))).padStart(2, '0');
-    const text = diff <= 0 ? '00:00:00' : `${h}:${m}:${s}`;
-    // Update all countdown elements on page
-    document.querySelectorAll('.countdown-timer').forEach(el => el.textContent = text);
-  }
-
-  tick();
-  setInterval(tick, 1000);
-}
 
 // ── GALLERY ──
 function switchImg(thumb) {
@@ -336,9 +313,86 @@ function restoreFormData() {
   });
 }
 
+// ── ROTATING ANNOUNCE BAR ──
+function initAnnounceBar() {
+  const el = $('announceText');
+  if (!el) return;
+  const messages = [
+    () => `✦ Limited Stock &nbsp;·&nbsp; Sale Ends In <span class="countdown-timer">${el.querySelector('.countdown-timer')?.textContent || '--:--:--'}</span> ✦`,
+    () => '✦ Only 4 Units Left In Stock — Order Now ✦',
+    () => '✦ 30-Day Money-Back Guarantee &nbsp;·&nbsp; Secure Checkout ✦',
+    () => '✦ 5,000+ Happy Customers &nbsp;·&nbsp; 4.8 ★ Average Rating ✦',
+  ];
+  let i = 0;
+  setInterval(() => {
+    i = (i + 1) % messages.length;
+    el.style.opacity = '0';
+    setTimeout(() => {
+      el.innerHTML = messages[i]();
+      el.style.opacity = '1';
+    }, 400);
+  }, 4000);
+}
+
+// ── VIEWING NOW ──
+function initViewingNow() {
+  const el = $('viewerCount');
+  if (!el) return;
+  const base = 11 + Math.floor(Math.random() * 8);
+  el.textContent = base;
+  setInterval(() => {
+    const change = Math.random() > 0.5 ? 1 : -1;
+    const current = parseInt(el.textContent);
+    const next = Math.min(24, Math.max(8, current + change));
+    el.textContent = next;
+  }, 8000);
+}
+
+// ── MOBILE MENU ──
+function toggleMobileMenu() {
+  const menu = $('mobileMenu');
+  const btn = $('mobileMenuBtn');
+  if (!menu) return;
+  const open = menu.classList.toggle('open');
+  if (btn) btn.textContent = open ? '✕' : '☰';
+}
+
+// ── COUNTDOWN KEY UPDATE ──
+// Update key from clouddrop to rollluxe
+const TIMER_KEY = 'rollluxe_sale_end';
+
+function initCountdown() {
+  let end = parseInt(localStorage.getItem(TIMER_KEY));
+  // Also migrate old key
+  if (!end || end < Date.now()) {
+    const old = parseInt(localStorage.getItem('clouddrop_sale_end'));
+    if (old && old > Date.now()) {
+      end = old;
+    } else {
+      const hours = 4 + Math.random() * 6;
+      end = Date.now() + hours * 3600000;
+    }
+    localStorage.setItem(TIMER_KEY, end);
+  }
+
+  function tick() {
+    const diff = end - Date.now();
+    const h = String(Math.max(0, Math.floor(diff / 3600000))).padStart(2, '0');
+    const m = String(Math.max(0, Math.floor((diff % 3600000) / 60000))).padStart(2, '0');
+    const s = String(Math.max(0, Math.floor((diff % 60000) / 1000))).padStart(2, '0');
+    const text = diff <= 0 ? '00:00:00' : `${h}:${m}:${s}`;
+    document.querySelectorAll('.countdown-timer').forEach(el => el.textContent = text);
+  }
+
+  tick();
+  setInterval(tick, 1000);
+}
+
 // ── INIT ──
 document.addEventListener('DOMContentLoaded', () => {
   initCountdown();
+  initAnnounceBar();
+  initViewingNow();
   restoreFormData();
   if (!sessionStorage.getItem('cd_welcomed')) {
     setTimeout(showWelcome, 800);

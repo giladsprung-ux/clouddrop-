@@ -3,8 +3,28 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>RollLuxe | Restaurant Quality Sushi At Home</title>
-  <meta name="description" content="The complete 10-piece premium sushi making kit. Perfect rolls every time — no experience needed.">
+  <title>RollLuxe | Premium Sushi Making Kit — Restaurant Quality At Home</title>
+  <meta name="description" content="The complete 10-piece premium sushi making kit. Make restaurant-quality rolls, nigiri & onigiri at home — no experience needed. Free shipping. 30-day guarantee.">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org/",
+    "@type": "Product",
+    "name": "RollLuxe Premium Sushi Making Kit",
+    "description": "Complete 10-piece sushi making kit with 4 mold shapes, rice paddle and serving fork.",
+    "brand": { "@type": "Brand", "name": "RollLuxe" },
+    "offers": {
+      "@type": "Offer",
+      "price": "35.00",
+      "priceCurrency": "USD",
+      "availability": "https://schema.org/InStock"
+    },
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "ratingValue": "4.8",
+      "reviewCount": "1847"
+    }
+  }
+  </script>
   <!-- Open Graph -->
   <meta property="og:title" content="RollLuxe | Restaurant Quality Sushi At Home">
   <meta property="og:description" content="The complete 10-piece premium sushi making kit. Perfect rolls every time — no experience needed.">
@@ -23,7 +43,7 @@
 <body>
 
 <div class="announce-bar">
-  <div class="announce-inner">
+  <div class="announce-inner" id="announceText">
     ✦ Limited Stock &nbsp;·&nbsp; Sale Ends In <span id="countdown" class="countdown-timer">--:--:--</span> ✦
   </div>
 </div>
@@ -40,6 +60,13 @@
       <a href="#faq">FAQ</a>
     </nav>
     <button class="btn btn-sm" onclick="scrollToProduct()">Order Now →</button>
+    <button class="mobile-menu-btn" onclick="toggleMobileMenu()" id="mobileMenuBtn">☰</button>
+  </div>
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="#product" onclick="toggleMobileMenu()">Shop</a>
+    <a href="#reviews" onclick="toggleMobileMenu()">Reviews</a>
+    <a href="#faq" onclick="toggleMobileMenu()">FAQ</a>
+    <button class="btn btn-hero" style="width:100%;margin-top:8px" onclick="toggleMobileMenu();scrollToProduct()">Order Now →</button>
   </div>
 </header>
 
@@ -106,6 +133,7 @@
       <div class="product-rating">
         <span class="stars">★★★★★</span>
         <a href="#reviews" class="rating-link">1,847 reviews</a>
+        <span class="viewing-now" id="viewingNow">👁 <span id="viewerCount">14</span> people viewing</span>
       </div>
       <div class="product-price-row">
         <span class="product-price">$35.00</span>
@@ -232,9 +260,9 @@
 
       <div class="trust-badges">
         <div class="trust-badge">🔒 Secure Checkout</div>
-        <div class="trust-badge">📦 Free Shipping</div>
         <div class="trust-badge">↩ 30-Day Returns</div>
         <div class="trust-badge">⚡ Ships in 24hrs</div>
+        <div class="trust-badge">🏅 BPA-Free Materials</div>
       </div>
       <div class="feature-list">
         <div class="feat">✦ Rectangle mold — classic maki rolls, perfect every time</div>
@@ -392,6 +420,16 @@
     <div class="cta-trust">
       <span>🔒 Secure</span>
       <span>↩ 30-Day Returns</span>
+    </div>
+  </div>
+</section>
+
+<section class="guarantee-section">
+  <div class="container guarantee-inner">
+    <div class="guarantee-icon">🏅</div>
+    <div class="guarantee-text">
+      <h3>30-Day Money-Back Guarantee</h3>
+      <p>Not happy with your RollLuxe kit? Contact us within 30 days and we'll refund every penny — no questions asked. We stand behind every kit we ship.</p>
     </div>
   </div>
 </section>
