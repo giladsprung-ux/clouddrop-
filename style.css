@@ -433,30 +433,6 @@ body {
   position: relative;
 }
 
-/* Corner ornaments for gallery */
-.gallery-main-wrap::before,
-.gallery-main-wrap::after {
-  content: '';
-  position: absolute;
-  width: 20px;
-  height: 20px;
-  z-index: 2;
-  pointer-events: none;
-}
-
-.gallery-main-wrap::before {
-  top: -6px;
-  left: -6px;
-  border-top: 1px solid var(--gold);
-  border-left: 1px solid var(--gold);
-}
-
-.gallery-main-wrap::after {
-  bottom: 18px;
-  right: -6px;
-  border-bottom: 1px solid var(--gold);
-  border-right: 1px solid var(--gold);
-}
 
 .gallery-main {
   width: 100%;
