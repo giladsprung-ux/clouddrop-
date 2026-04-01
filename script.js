@@ -213,6 +213,96 @@ function placeOrder(e) {
   }
 }
 
+// ── REVIEW MODAL ──
+function openReviewModal() {
+  const overlay = $('reviewOverlay');
+  if (!overlay) return;
+  overlay.style.display = 'flex';
+  requestAnimationFrame(() => overlay.classList.add('open'));
+  initStarPicker();
+}
+
+function closeReviewModal() {
+  const overlay = $('reviewOverlay');
+  if (!overlay) return;
+  overlay.classList.remove('open');
+  setTimeout(() => { overlay.style.display = 'none'; }, 250);
+}
+
+function closeReviewOverlay(e) {
+  if (e.target === $('reviewOverlay')) closeReviewModal();
+}
+
+function initStarPicker() {
+  const picker = $('starPicker');
+  if (!picker || picker._init) return;
+  picker._init = true;
+  const stars = picker.querySelectorAll('.star-pick');
+  stars.forEach(star => {
+    star.addEventListener('click', () => {
+      const val = parseInt(star.dataset.val);
+      $('reviewRating').value = val;
+      stars.forEach((s, i) => s.classList.toggle('active', i < val));
+    });
+    star.addEventListener('mouseenter', () => {
+      const val = parseInt(star.dataset.val);
+      stars.forEach((s, i) => s.classList.toggle('active', i < val));
+    });
+  });
+  picker.addEventListener('mouseleave', () => {
+    const val = parseInt($('reviewRating').value);
+    const stars = picker.querySelectorAll('.star-pick');
+    stars.forEach((s, i) => s.classList.toggle('active', i < val));
+  });
+}
+
+function submitReview(e) {
+  e.preventDefault();
+  const rating = parseInt($('reviewRating').value);
+  if (!rating) { alert('Please select a star rating.'); return; }
+  const name = $('reviewName').value.trim();
+  const text = $('reviewText').value.trim();
+
+  // Build initials
+  const parts = name.split(' ');
+  const initials = parts.map(p => p[0]).join('').slice(0, 2).toUpperCase();
+
+  // Build stars HTML
+  const fullStars = '★'.repeat(rating) + (rating < 5 ? '<span style="opacity:0.3">' + '★'.repeat(5 - rating) + '</span>' : '');
+
+  // Today's date
+  const now = new Date();
+  const dateStr = now.toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' });
+
+  const card = document.createElement('div');
+  card.className = 'review-card';
+  card.innerHTML = `
+    <div class="review-top">
+      <div class="reviewer-avatar">${initials}</div>
+      <div>
+        <div class="reviewer-name">${name}</div>
+        <div class="review-stars">${fullStars}</div>
+      </div>
+    </div>
+    <p class="review-text">"${text}"</p>
+    <div class="review-date">${dateStr}</div>`;
+
+  const grid = document.querySelector('.reviews-grid');
+  if (grid) grid.appendChild(card);
+
+  closeReviewModal();
+  $('reviewForm').reset();
+  $('reviewRating').value = 0;
+}
+
+// ── EMAIL SIGNUP ──
+function submitEmailSignup(e) {
+  e.preventDefault();
+  e.target.style.display = 'none';
+  const note = document.getElementById('emailSignupNote');
+  if (note) note.style.display = 'block';
+}
+
 // ── EXIT INTENT ──
 function initExitIntent() {
   let shown = false;

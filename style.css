@@ -157,6 +157,21 @@ body {
   box-shadow: 0 8px 32px rgba(201, 168, 76, 0.25);
 }
 
+.btn-outline {
+  background: transparent;
+  border: 1px solid var(--gold);
+  color: var(--gold);
+  padding: 13px 32px;
+  font-size: 13px;
+  letter-spacing: 2px;
+  font-weight: 700;
+  text-transform: uppercase;
+  cursor: pointer;
+  border-radius: 2px;
+  transition: background 0.2s, color 0.2s;
+}
+.btn-outline:hover { background: var(--gold); color: #0a0a0a; }
+
 .btn-buy {
   background: var(--gold);
   color: #0a0a0a;
@@ -772,6 +787,22 @@ body {
 }
 .review-date { font-size: 12px; color: var(--border); }
 
+/* ── STAR PICKER ── */
+.star-picker {
+  display: flex;
+  gap: 6px;
+  margin-top: 6px;
+}
+.star-pick {
+  font-size: 28px;
+  color: var(--border);
+  cursor: pointer;
+  transition: color 0.15s, transform 0.1s;
+  line-height: 1;
+}
+.star-pick:hover,
+.star-pick.active { color: var(--gold); transform: scale(1.15); }
+
 /* ── CTA BANNER ── */
 .cta-banner {
   background: linear-gradient(135deg, rgba(201, 168, 76, 0.06), rgba(232, 204, 122, 0.04));
@@ -890,6 +921,85 @@ body {
 }
 
 .faq-item a { color: var(--gold); }
+
+/* ── EMAIL SIGNUP ── */
+.email-signup-section {
+  background: var(--surface);
+  border-top: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+  padding: 72px 0;
+  text-align: center;
+}
+
+.email-signup-inner {
+  max-width: 560px;
+}
+
+.email-signup-icon {
+  font-size: 32px;
+  color: var(--gold);
+  margin-bottom: 16px;
+  opacity: 0.8;
+}
+
+.email-signup-title {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 36px;
+  font-weight: 600;
+  color: var(--text);
+  margin-bottom: 10px;
+  letter-spacing: 1px;
+}
+
+.email-signup-sub {
+  color: var(--muted);
+  font-size: 15px;
+  margin-bottom: 28px;
+}
+
+.email-signup-form {
+  display: flex;
+  gap: 0;
+  max-width: 440px;
+  margin: 0 auto;
+}
+
+.email-signup-input {
+  flex: 1;
+  background: var(--bg);
+  border: 1px solid var(--border);
+  border-right: none;
+  color: var(--text);
+  padding: 14px 18px;
+  font-size: 14px;
+  font-family: inherit;
+  border-radius: 2px 0 0 2px;
+  outline: none;
+  transition: border-color 0.2s;
+}
+
+.email-signup-input:focus { border-color: var(--gold); }
+.email-signup-input::placeholder { color: var(--muted); }
+
+.email-signup-btn {
+  border-radius: 0 2px 2px 0;
+  padding: 14px 28px;
+  white-space: nowrap;
+}
+
+.email-signup-note {
+  margin-top: 16px;
+  color: var(--gold);
+  font-size: 14px;
+  font-weight: 600;
+}
+
+@media (max-width: 580px) {
+  .email-signup-form { flex-direction: column; }
+  .email-signup-input { border-right: 1px solid var(--border); border-bottom: none; border-radius: 2px 2px 0 0; }
+  .email-signup-btn { border-radius: 0 0 2px 2px; width: 100%; }
+  .email-signup-title { font-size: 28px; }
+}
 
 /* ── FOOTER ── */
 .footer {
@@ -1577,9 +1687,15 @@ body {
 /* ── VIDEO SECTION ── */
 .video-section { padding: 80px 0; }
 
+.video-row {
+  display: flex;
+  gap: 24px;
+  justify-content: center;
+}
+
 .video-wrap {
+  flex: 1;
   max-width: 480px;
-  margin: 0 auto;
   border-radius: 16px;
   overflow: hidden;
   border: 1px solid var(--border);
@@ -1595,6 +1711,7 @@ body {
 
 @media (max-width: 900px) {
   .video-section { padding: 48px 0; }
+  .video-row { flex-direction: column; align-items: center; }
   .video-wrap { max-width: 100%; }
 }
 

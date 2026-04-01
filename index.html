@@ -407,8 +407,36 @@
         <div class="review-date">December 20, 2025</div>
       </div>
     </div>
+    <div style="text-align:center;margin-top:40px">
+      <button class="btn btn-outline" onclick="openReviewModal()">✍ Write a Review</button>
+    </div>
   </div>
 </section>
+
+<!-- ── REVIEW MODAL ── -->
+<div class="overlay" id="reviewOverlay" style="display:none" onclick="closeReviewOverlay(event)">
+  <div class="modal-box" style="max-width:480px">
+    <button class="modal-close" onclick="closeReviewModal()">✕</button>
+    <h3 class="modal-title" style="margin-bottom:4px">Share Your Experience</h3>
+    <p style="color:var(--muted);font-size:0.85rem;margin-bottom:20px;text-align:center">Your review helps others make the right choice.</p>
+    <form id="reviewForm" onsubmit="submitReview(event)">
+      <label class="form-label">Your Rating</label>
+      <div class="star-picker" id="starPicker">
+        <span class="star-pick" data-val="1">★</span>
+        <span class="star-pick" data-val="2">★</span>
+        <span class="star-pick" data-val="3">★</span>
+        <span class="star-pick" data-val="4">★</span>
+        <span class="star-pick" data-val="5">★</span>
+      </div>
+      <input type="hidden" id="reviewRating" value="0">
+      <label class="form-label" style="margin-top:14px">Your Name</label>
+      <input class="form-input" id="reviewName" type="text" placeholder="e.g. Jessica M." required>
+      <label class="form-label" style="margin-top:14px">Your Review</label>
+      <textarea class="form-input" id="reviewText" rows="4" placeholder="Tell us what you think..." required style="resize:vertical"></textarea>
+      <button type="submit" class="btn btn-hero" style="width:100%;margin-top:20px">Submit Review</button>
+    </form>
+  </div>
+</div>
 
 <section class="cta-banner">
   <div class="container cta-inner">
@@ -436,17 +464,31 @@
     </div>
     <h2 class="section-title">Watch how easy it is.</h2>
     <p class="section-sub">From rice to restaurant-quality rolls in minutes.</p>
-    <div class="video-wrap">
-      <video
-        src="video.mp4"
-        autoplay
-        muted
-        loop
-        playsinline
-        controls
-        poster="product1.jpg">
-        Your browser does not support the video tag.
-      </video>
+    <div class="video-row">
+      <div class="video-wrap">
+        <video
+          src="video.mp4"
+          autoplay
+          muted
+          loop
+          playsinline
+          controls
+          poster="product1.jpg">
+          Your browser does not support the video tag.
+        </video>
+      </div>
+      <div class="video-wrap">
+        <video
+          src="video2.mp4"
+          autoplay
+          muted
+          loop
+          playsinline
+          controls
+          poster="product1.jpg">
+          Your browser does not support the video tag.
+        </video>
+      </div>
     </div>
   </div>
 </section>
@@ -546,6 +588,20 @@
         <p>Absolutely. The molds work great for pressed rice dishes, onigiri, rice balls, and even creative desserts. Very versatile.</p>
       </details>
     </div>
+  </div>
+</section>
+
+<!-- ── EMAIL SIGNUP ── -->
+<section class="email-signup-section">
+  <div class="container email-signup-inner">
+    <div class="email-signup-icon">✉</div>
+    <h2 class="email-signup-title">Join our email list</h2>
+    <p class="email-signup-sub">Get exclusive deals and early access to new products.</p>
+    <form class="email-signup-form" onsubmit="submitEmailSignup(event)">
+      <input class="email-signup-input" type="email" placeholder="your@gmail.com" required>
+      <button class="btn btn-hero email-signup-btn" type="submit">Subscribe</button>
+    </form>
+    <p class="email-signup-note" id="emailSignupNote" style="display:none">✓ You're in! Thanks for joining.</p>
   </div>
 </section>
 
