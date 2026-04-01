@@ -1600,6 +1600,19 @@ body {
 /* ── SPECS SECTION ── */
 .specs-section { padding: 80px 0; }
 
+.specs-img-wrap {
+  max-width: 600px;
+  margin: 0 auto 48px;
+}
+
+.specs-img {
+  width: 100%;
+  display: block;
+  border-radius: 4px;
+  border: 1px solid var(--border);
+  background: var(--surface);
+}
+
 .specs-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
