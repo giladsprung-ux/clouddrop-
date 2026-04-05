@@ -581,13 +581,21 @@
 
 <!-- ── EMAIL SIGNUP ── -->
 <section class="email-signup-section">
-  <div class="container email-signup-inner">
-    <div class="email-signup-icon">✉</div>
-    <h2 class="email-signup-title">Join our email list</h2>
-    <p class="email-signup-sub">Get exclusive deals and early access to new products.</p>
+  <div class="email-signup-inner">
+    <div class="email-signup-brand">
+      <img src="logo.png" alt="RollLuxe" class="email-signup-logo">
+      <div class="email-signup-brand-text">
+        <span class="email-signup-brand-name">RollLuxe</span>
+        <span class="email-signup-brand-sub">Premium Sushi Craft</span>
+      </div>
+    </div>
+    <div class="email-signup-copy">
+      <h2 class="email-signup-title">Join our email list</h2>
+      <p class="email-signup-sub">Get exclusive deals and early access to new products.</p>
+    </div>
     <form class="email-signup-form" onsubmit="submitEmailSignup(event)">
-      <input class="email-signup-input" type="email" placeholder="your@gmail.com" required>
-      <button class="btn btn-hero email-signup-btn" type="submit">Subscribe</button>
+      <input class="email-signup-input" type="email" placeholder="Email address" required>
+      <button class="email-signup-btn" type="submit">→</button>
     </form>
     <p class="email-signup-note" id="emailSignupNote" style="display:none">✓ You're in! Thanks for joining.</p>
   </div>
